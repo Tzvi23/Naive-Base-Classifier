@@ -1,6 +1,5 @@
-# Author: Tzvi Puchinsky
 from Tkinter import *
-import tkFileDialog,tkMessageBox
+import tkFileDialog , tkMessageBox
 
 
 class GUI:
@@ -23,7 +22,7 @@ class GUI:
 
         lbl0 = Label(frame0, text="Naive Bayes Classifier", font="Courier 15 bold", width=50)
         lbl0.pack()
-        lbl01 = Label(frame0, text="By Tzvi Puchinsky", width=50)
+        lbl01 = Label(frame0, text="By Tzvi Puchinsky & Alla Kitayeva", width=50)
         lbl01.pack()
 
         # First Row
@@ -85,6 +84,7 @@ class GUI:
                 lbl4 = Label(frame5, text="Classifier Working! \n It'll take several minutes", width=30, fg="red")
                 lbl4.pack()
                 root.update()
+                model.change_scale(userCols)
                 for i in range(1, len(model.testData)):
                     lbl5 = Label(frame5, text="Currently Processing: " + str(i) + "/" + str(len(model.testData)),
                                  width=30,
