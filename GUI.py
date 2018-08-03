@@ -22,7 +22,7 @@ class GUI:
 
         lbl0 = Label(frame0, text="Naive Bayes Classifier", font="Courier 15 bold", width=50)
         lbl0.pack()
-        lbl01 = Label(frame0, text="By Tzvi Puchinsky & Alla Kitayeva", width=50)
+        lbl01 = Label(frame0, text="By Tzvi Puchinsky", width=50)
         lbl01.pack()
 
         # First Row
