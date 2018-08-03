@@ -1,6 +1,5 @@
-# Author: Tzvi Puchinsky
 from Tkinter import *
-import tkFileDialog,tkMessageBox
+import tkFileDialog , tkMessageBox
 
 
 class GUI:
@@ -85,6 +84,7 @@ class GUI:
                 lbl4 = Label(frame5, text="Classifier Working! \n It'll take several minutes", width=30, fg="red")
                 lbl4.pack()
                 root.update()
+                model.change_scale(userCols)
                 for i in range(1, len(model.testData)):
                     lbl5 = Label(frame5, text="Currently Processing: " + str(i) + "/" + str(len(model.testData)),
                                  width=30,

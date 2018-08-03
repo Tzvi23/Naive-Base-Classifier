@@ -1,4 +1,3 @@
-# Author: Tzvi Puchinsky
 import math
 
 from StructureBuilder import structure_builder
@@ -283,10 +282,12 @@ class model_builder:
                         current_scale[len(current_scale) - 1]:
                     self.testData[row][self.struct.attributes.index(attr)] = runner
 
-    def activate_model(self, index, userCols, yes_dict, no_dict):
+    def change_scale(self, userCols):
         for i in range(len(self.struct.attributes) - 1):
             if self.struct.structure[self.testData[0][i]] == 'NUMERIC':
                 self.change_to_scale_testData(self.testData[0][i], userCols)
+
+    def activate_model(self, index, userCols, yes_dict, no_dict):
         print("///////////// Process No: {0} \\\\\\\\\\\\\\\\".format(index))
         yes_prob = 1
         for i in range(len(self.struct.attributes) - 1):
