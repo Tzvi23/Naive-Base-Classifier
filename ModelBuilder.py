@@ -288,9 +288,6 @@ class model_builder:
                 self.change_to_scale_testData(self.testData[0][i], userCols)
 
     def activate_model(self, index, userCols, yes_dict, no_dict):
-        # for i in range(len(self.struct.attributes) - 1):
-        #     if self.struct.structure[self.testData[0][i]] == 'NUMERIC':
-        #         self.change_to_scale_testData(self.testData[0][i], userCols)
         print("///////////// Process No: {0} \\\\\\\\\\\\\\\\".format(index))
         yes_prob = 1
         for i in range(len(self.struct.attributes) - 1):
